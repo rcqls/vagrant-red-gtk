@@ -1,6 +1,6 @@
 # vagrant-red-gtk
 
-This repo contains a Vagrantfile allowing us to test [red/red:GTK (currently rcqls/red:GTK-dev)](https://github.com/rcqls/red@GTK-dev) from a VirtualBox.
+This repo contains a Vagrantfile allowing us to test [red/red:GTK (currently rcqls/red:GTK-dev)](https://github.com/rcqls/red) from a VirtualBox.
 
 ## Getting started
 
