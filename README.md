@@ -85,11 +85,11 @@ The usual way is to modify the`Vagrantfile` (using `config.vm.synced_folder`) bu
 /Users/rcqls/tmp/Demos:/home/vagrant/Demos
 ```
 
-Note also that `/vagrant` inside the guest is by default synced with the project folder of the host where the `Vagrantfile` is. In particular, this allows us to test interesting projects by cloning or copying them here. Some further projects often tested with redGTK:
+Note also that `/vagrant` inside the guest is by default synced with the project folder of the host where the `Vagrantfile` is. In particular, this allows us to test interesting projects by cloning or copying them here. Some further projects often tested with `red/GTK`:
 
 * @toomasv projects:
-	* [makedoc](https://github.com/toomasv/makedoc and in particular `easy-VID-rt.red`
-	* [learnig](https://github.com/toomasv/learning)
+	* [makedoc](https://github.com/toomasv/makedoc) and, in particular, `easy-VID-rt.red`
+	* [learnig](https://github.com/toomasv/learning) with, in particular, the lovely styles `shrinkable.red`, `fluid.red` and `responsive.red`.
 	* [ast](https://github.com/toomasv/ast)
 	* ....
 * TO COMPLETE....
