@@ -73,3 +73,5 @@ The usual way is to modify the`Vagrantfile` (using `config.vm.synced_folder`) bu
 /Users/rcqls/Github:/home/vagrant/Github
 /Users/rcqls/tmp/Demos:/home/vagrant/Demos
 ```
+
+Note also that `/vagrant` inside the guest is by default synced with the project folder of the host where the `Vagrantfile` is. 
