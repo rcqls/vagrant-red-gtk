@@ -66,20 +66,6 @@ See `vagrant -h` for the complete help. But quickly, it is good to know:
 
 ## Comments
 
-### Synced folders
-
-The usual way is to modify the`Vagrantfile` (using `config.vm.synced_folder`) but you can also create a file `synced_folder.cfg` (in the same folder than `Vagrantfile`) with each line following the format `<full_path_host_dir>:<full_fall_guest_dir>`. This file can be updated anytime and then applied with `vagrant reload`. As an example, the following lines constitute a valid `synced_folder.cfg` (on macOS):
-```
-/Users/rcqls/Github:/home/vagrant/Github
-/Users/rcqls/tmp/Demos:/home/vagrant/Demos
-```
-
-Note also that `/vagrant` inside the guest is by default synced with the project folder of the host where the `Vagrantfile` is. 
-
-### Other folder(s) in this repo
-
-alternative Vagrantfiles are  proposed inside the folders of this repository.
-
 ### Already inside the red-gtk-dev box
 
 Inside the red-gtk-dev vbox and inside the `install` folder, there is:
@@ -89,3 +75,25 @@ Inside the red-gtk-dev vbox and inside the `install` folder, there is:
 * [reds](https://github.com/rcqls/reds) allowing compilation from red source (`reds` standing for `red` from `s`ource) in a similar way than `red` binary.
 * [red/code](https://github.com/red/code) and [red/community](https://github.com/red/community) for testing Red/GTK
 * [redCV](https://github.com/ldci/redCV) which requires compilation
+
+
+### Synced folders
+
+The usual way is to modify the`Vagrantfile` (using `config.vm.synced_folder`) but you can also create a file `synced_folder.cfg` (in the same folder than `Vagrantfile`) with each line following the format `<full_path_host_dir>:<full_fall_guest_dir>`. This file can be updated anytime and then applied with `vagrant reload`. As an example, the following lines constitute a valid `synced_folder.cfg` (on macOS):
+```
+/Users/rcqls/Github:/home/vagrant/Github
+/Users/rcqls/tmp/Demos:/home/vagrant/Demos
+```
+
+Note also that `/vagrant` inside the guest is by default synced with the project folder of the host where the `Vagrantfile` is. In particular, this allows us to test interesting projects by cloning or copying them here. Some further projects often tested with redGTK:
+
+* @toomasv projects:
+	* [makedoc](https://github.com/toomasv/makedoc and in particular `easy-VID-rt.red`
+	* [learnig](https://github.com/toomasv/learning)
+	* [ast](https://github.com/toomasv/ast)
+	* ....
+* TO COMPLETE....
+
+### Other folder(s) in this repo
+
+alternative Vagrantfiles are  proposed inside the folders of this repository.
