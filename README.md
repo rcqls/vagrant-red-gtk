@@ -60,3 +60,6 @@ See `vagrant -h` for the complete help. But quickly, it is good to know:
 
 * `vagrant halt` to stop the vbox and `vagrant up` to restart it
 * `vagrant suspend` to suspend the vbox and `vagrant resume` to get back to the vbox.
+* more carefully, `vagrant destroy` to destroy everything and `vagrant up` to rebuild it.
+* `vagrant provision` if you made some changes in the install process?
+* `vagrant box -h` to see all the action to manage the virtual boxes.
