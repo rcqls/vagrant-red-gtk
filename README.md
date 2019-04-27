@@ -90,7 +90,7 @@ Note also that `/vagrant` inside the guest is by default synced with the project
 * @toomasv projects:
 	* [makedoc](https://github.com/toomasv/makedoc) and, in particular, `easy-VID-rt.red`
 	* [learnig](https://github.com/toomasv/learning) with, in particular, the lovely styles `shrinkable.red`, `fluid.red` and `responsive.red`.
-	* [ast](https://github.com/toomasv/ast)
+	* [ast](https://github.com/toomasv/ast) an ambitious project for visual programming 
 	* ....
 * TO COMPLETE....
 
