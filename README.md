@@ -54,3 +54,9 @@ reds -r mapdiagram.red
 ./mapdiagram
 ```
 
+## Some vagrant tasks
+
+See `vagrant -h` for the complete help. But quickly, it is good to know:
+
+* `vagrant halt` to stop the vbox and `vagrant up` to restart it
+* `vagrant suspend` to suspend the vbox and `vagrant resume` to get back to the vbox.
