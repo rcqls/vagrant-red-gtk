@@ -76,6 +76,16 @@ The usual way is to modify the`Vagrantfile` (using `config.vm.synced_folder`) bu
 
 Note also that `/vagrant` inside the guest is by default synced with the project folder of the host where the `Vagrantfile` is. 
 
-### other folder(s) in this repo
+### Other folder(s) in this repo
 
 alternative Vagrantfiles are  proposed inside the folders of this repository.
+
+### Already inside the red-gtk-dev box
+
+Inside the red-gtk-dev vbox and inside the `install` folder, there is:
+
+
+* [red](https://github.com/rcqls/red/tree/GTK-dev) required for compilation from source.
+* [reds](https://github.com/rcqls/reds) allowing compilation from red source (`reds` standing for `red` from `s`ource) in a similar way than `red` binary.
+* [red/code](https://github.com/red/code) and [red/community](https://github.com/red/community) for testing Red/GTK
+* [redCV](https://github.com/ldci/redCV) which requires compilation
