@@ -75,3 +75,7 @@ The usual way is to modify the`Vagrantfile` (using `config.vm.synced_folder`) bu
 ```
 
 Note also that `/vagrant` inside the guest is by default synced with the project folder of the host where the `Vagrantfile` is. 
+
+### other folder(s) in this repo
+
+alternative Vagrantfiles are  proposed inside the folders of this repository.
