@@ -16,10 +16,11 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   
-  if File.exists? "synced_folder.cfg" 
-    File.read("synced_folder.cfg").strip.split("\n") do |line|
+  if File.exists? "synced_folder.cfg"
+    File.read("synced_folder.cfg").strip.split("\n").each do |line|
       src,dest=line.split(":").map{|e| e.strip}
-      config.vm.synced_folder src dest
+      # puts src + " => " + dest
+      config.vm.synced_folder src, dest
     end
   end
 

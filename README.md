@@ -58,8 +58,18 @@ reds -r mapdiagram.red
 
 See `vagrant -h` for the complete help. But quickly, it is good to know:
 
-* `vagrant halt` to stop the vbox and `vagrant up` to restart it
+* `vagrant halt` to stop the vbox and `vagrant up` to restart it (in fact equivalent to `vagrant reload`)
 * `vagrant suspend` to suspend the vbox and `vagrant resume` to get back to the vbox.
 * more carefully, `vagrant destroy` to destroy everything and `vagrant up` to rebuild it.
 * `vagrant provision` if you made some changes in the install process?
 * `vagrant box -h` to see all the action to manage the virtual boxes.
+
+## Comments
+
+### Synced folders
+
+The usual way is to modify the`Vagrantfile` (using `config.vm.synced_folder`) but you can also create a file `synced_folder.cfg` (in the same folder than `Vagrantfile`) with each line following the format `<full_path_host_dir>:<full_fall_guest_dir>`. This file can be updated anytime and then applied with `vagrant reload`. As an example, the following lines constitute a valid `synced_folder.cfg` (on macOS):
+```
+/Users/rcqls/Github:/home/vagrant/Github
+/Users/rcqls/tmp/Demos:/home/vagrant/Demos
+```
