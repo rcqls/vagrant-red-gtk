@@ -4,7 +4,9 @@ This repo contains a Vagrantfile allowing us to test [red/red:GTK (currently rcq
 
 ## Getting started
 
-* install [vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org)
+* Install [vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org)
+* Don't forget to install Extension pack from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) (required for camera stuff).
+* You should also update the virtualbox-guest.
 * copy the Vagrantfile: as an example to do that you could clone this repo 
 ```
 cd <somewhere>
@@ -12,7 +14,7 @@ git clone https://github.com/rcqls/vagrant-red-gtk
 ```
 * create the red-gtk-dev VBox:
 ```
-cd vagrant-red-gtk
+cd vagrant-red-gtk/bento-debian-9.6-i386 # or bento-debian-9.6-i386-xfce4 (for xserver inside the box)
 vagrant up
 ```
 * play with it
