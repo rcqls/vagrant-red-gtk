@@ -7,7 +7,9 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "bento/ubuntu-17.10-i386"
+   
+  config.vm.box = "d78ui98/linuxmint-19-xfce-32bit"
+  config.vm.box_version = "1.0.2"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -28,7 +30,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |vb|
      # Use VBoxManage to customize the VM. For example to change memory:
      vb.memory = 2048
-     vb.name = "red-gtk-dev-ubuntu"
+     vb.name = "red-gtk-linuxmint19-xfce4"
      vb.gui = true
      vb.customize ["modifyvm", :id, "--usbohci", "on"]
      vb.customize ["modifyvm", :id, "--usbehci", "on"]
@@ -42,9 +44,12 @@ Vagrant.configure("2") do |config|
   # information on available options.
   config.vm.provision :shell, :inline => <<-SHELL
     apt-get update && apt-get install -y wget && apt-get install -y git
-    apt-get install -y libc6 libcurl xorg openbox xserver-org
-    apt-get install -y libgtk-3-bin librsvg2-common libcanberra-gtk-module  libcanberra-gtk3-module  at-spi2-core 
-    apt-get install -y dbus-x11 xauth
+    apt-get install -y libc6 libcurl3 
+    apt-get install -y libgtk-3.0 #libelementary2
+    apt-get install -y dbus-x11  xauth
+    apt-get install -y libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-pulseaudio
+    apt-get install -y gstreamer1.0-gtk3
+    apt-get install -y libgudev-1.0-0
     mkdir -p /var/run/dbus
   SHELL
   config.vm.provision :shell, :privileged => false, :inline => <<-SHELL2
@@ -73,6 +78,7 @@ Vagrant.configure("2") do |config|
     cd $HOME
     echo 'export RED_GTK_DIR="/home/vagrant/install/red"' >> .bash_profile
     echo 'export PATH=~/bin:$PATH' >> .bash_profile
+    echo 'export GST_V4L2_USE_LIBV4L2=1' >> .bash_profile
   SHELL2
 
 end
