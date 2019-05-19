@@ -49,6 +49,7 @@ Vagrant.configure("2") do |config|
     apt-get install -y dbus-x11  xauth
     apt-get install -y libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-pulseaudio
     apt-get install -y xfce4 xserver-xorg xinit
+    apt-get install -y build-essential dkms linux-headers-$(uname -r)
     mkdir -p /var/run/dbus
   SHELL
   config.vm.provision :shell, :privileged => false, :inline => <<-SHELL2
